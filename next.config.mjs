@@ -1,18 +1,22 @@
+// USE .nojekyll file for github pages deployment in out folder
+
+const isProd = process.env.NODE_ENV === 'production';
+const repoName = 'default_resume';
+const basePath = isProd ? `/${repoName}` : '';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  images: {
+  output: 'export',
+  reactStrictMode: true,
+  
+  trailingSlash: true,
+  basePath: basePath,
+  assetPrefix: basePath,
+  images: { 
     unoptimized: true,
   },
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+};
 
-  output: 'export',
-  // assetPrefix: '/<repo-name>/',
-  // basePath: '/<repo-name>',
-}
-
-export default nextConfig
+export default nextConfig;

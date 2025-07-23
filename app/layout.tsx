@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/placeholder-user.jpg', sizes: '16x16', type: 'image/png' },
-      { url: '/placeholder-user.jpg', sizes: '32x32', type: 'image/png' },
+      { url: '/placeholder-logo.jpg', sizes: '32x32', type: 'image/png' },
     ],
     shortcut: '/favicon.ico',
   },

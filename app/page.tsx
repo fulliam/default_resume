@@ -24,6 +24,7 @@ import {
   Target,
   Clock,
 } from "lucide-react"
+import image from '../public/4.jpg';
 
 export default function Portfolio() {
   const [isVisible, setIsVisible] = useState(false)
@@ -84,7 +85,7 @@ export default function Portfolio() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-xl font-bold text-white">Семён Петров</div>
+            <div className="text-xl font-bold text-white">Резюме</div>
             <div className="hidden md:flex space-x-6">
               {[
                 { id: "hero", label: "Главная" },
@@ -118,7 +119,7 @@ export default function Portfolio() {
         >
           <div className="mb-8">
             <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 p-1">
-              <div style={{ backgroundImage: "url(/4.jpg)", backgroundSize: "cover", backgroundPosition: "top", borderRadius: "50%", width: "100%", height: "100%", overflow: "hidden", boxSizing: "border-box", border: "2px solid #fff" }}/>
+              <div style={{ backgroundImage: `url(${image.src})`, backgroundSize: "cover", backgroundPosition: "top", borderRadius: "50%", width: "100%", height: "100%", overflow: "hidden", boxSizing: "border-box", border: "2px solid #fff" }}/>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
               Семён{" "}
